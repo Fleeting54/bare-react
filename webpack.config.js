@@ -14,7 +14,12 @@ module.exports = {
             exclude: /node_modules/,
             include: [path.join(__dirname, '/src/js')],
             loader: ['babel-loader']
-        }
+        },
+        {
+          loader: ['style-loader', 'css-loader'],
+          test: /\.css$/
+          
+      }
     ]
   },
   plugins: [
